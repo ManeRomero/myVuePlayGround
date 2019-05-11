@@ -1,7 +1,7 @@
 <template>
   <header>
-    <a href="#" @click="click=true">Click para ver el Menú</a>
-    <div>
+    <a href="#" @click="click=true" v-if="!click">Click para ver el Menú</a>
+    <div v-if="click">
       <a
         v-bind:href="apartado.ruta"
         v-for="(apartado, index) in menu"
@@ -9,14 +9,12 @@
         @click="click=false"
       >{{apartado.titulo}}</a>
 
-      <span v-if="click=true" @click="click=false">x</span>
+      <span @click="click=false">x</span>
     </div>
   </header>
 </template>
 
 <script>
-import Vue from "vue";
-
 export default {
   name: "navigation",
   data() {
@@ -63,18 +61,19 @@ header {
   flex-flow: wrap;
   color: white;
   height: auto;
+  margin-top: 10vh;
 }
 
 a {
   border: 10px solid darken($color, 20%);
-  padding: 3vw;
+  padding: 1vw;
   border-radius: 10px 0 10px;
   background: $color;
   text-decoration: none;
   font-size: 1.5em;
   color: white;
 
-  %:hover {
+  &:hover {
     box-shadow: 13px 0 13px grey;
     transform: translateY(-7px);
   }
