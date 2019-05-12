@@ -1,5 +1,5 @@
 # myVuePlayGround
-In here I'll develope my lil experiments zone. Take care, it maybe explodes!
+In here I'll develope my lil experiments zone. Take care, maybe it could explode!
 ________________________________
 
 As a medium level (better lowly) web developer, I've been searching in a ocean of knowledge.. pure blur concepts about everything was coming to my head.. also the magnificent Vue. Now I'm in a position to say that I'm really ready to make this, once I've learned the 'scss working flux', moreover to handle the html standards and the JavaScript Universe (of course, not all the 'planets').
