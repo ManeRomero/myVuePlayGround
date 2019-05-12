@@ -2,14 +2,14 @@
   <header>
     <a href="#" @click="click=true" v-if="!click">Click para ver el Menú</a>
     <div v-if="click">
-      <a
-        v-bind:href="apartado.ruta"
-        v-for="(apartado, index) in menu"
-        :key="index"
-        @click="click=false"
-      >{{apartado.titulo}}</a>
+      <span @click="!click">x</span>
 
-      <span @click="click=false">x</span>
+      <a
+        v-for="(apartado, index) in menu"
+        :href="apartado.ruta"
+        :key="index"
+        @click="!click"
+      >{{apartado.titulo}}</a>
     </div>
   </header>
 </template>
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #536976;
+$color: #99bdd1;
 
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -59,21 +59,35 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-flow: wrap;
-  color: white;
+  color: rgb(58, 57, 57);
   height: auto;
   margin-top: 10vh;
-}
+  position: relative;
 
-a {
-  border: 10px solid darken($color, 20%);
-  padding: 1vw;
-  border-radius: 10px 0 10px;
-  background: $color;
-  text-decoration: none;
-  font-size: 1.5em;
-  color: white;
+  div {
+    position: relative;
+  }
 
-  &:hover {
+  span {
+    color: red;
+    border: 1px solid red;
+    padding: 1vh;
+    position: absolute;
+    right: 0;
+  }
+
+  a {
+    border: 10px solid darken($color, 20%);
+    padding: 1vw;
+    border-radius: 10px 0 10px;
+    background: $color;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  > a:hover,
+  > div a:hover {
     box-shadow: 13px 0 13px grey;
     transform: translateY(-7px);
   }

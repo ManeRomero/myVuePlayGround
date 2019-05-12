@@ -27,3 +27,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### CUADERNO DE TRUCOS
+Object.freeze(NOMBRE_OBJETO) => interrumpe la reactividad del DOM, por imposibilitar cambios en el _obj argumento
