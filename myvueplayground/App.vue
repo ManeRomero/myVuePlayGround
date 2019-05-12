@@ -2,7 +2,7 @@
   <header>
     <a href="#" @click="click=true" v-if="!click">myRandomNamer</a>
     <div v-if="click">
-      <span @click="!click">x</span>
+      <span @click="!click" :title="'Cierra el ' + name">x</span>
 
       <a
         v-for="(apartado, index) in menu"
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: "navigation",
+  name: "menu",
   data() {
     return {
       click: false,
