@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="#" @click="click=true" v-if="!click">Click para ver el Menú</a>
+    <a href="#" @click="click=true" v-if="!click">myRandomNamer</a>
     <div v-if="click">
       <span @click="!click">x</span>
 
@@ -22,16 +22,16 @@ export default {
       click: false,
       menu: [
         {
-          titulo: "Doctor Arruga",
-          ruta: "/doctorArruga"
+          titulo: "name",
+          ruta: "/randomName"
         },
         {
-          titulo: "Puto$elmo",
-          ruta: "/doctorArruga"
+          titulo: "color",
+          ruta: "/randomColor"
         },
         {
-          titulo: "StereooTipo",
-          ruta: "/stereootipo"
+          titulo: "font",
+          ruta: "/randomFont"
         },
         {
           titulo: "Señor Eme",
