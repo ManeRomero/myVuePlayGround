@@ -32,10 +32,6 @@ export default {
         {
           titulo: "font",
           ruta: "/randomFont"
-        },
-        {
-          titulo: "Señor Eme",
-          ruta: "/mistereme"
         }
       ]
     };
@@ -66,14 +62,14 @@ header {
 
   div {
     position: relative;
-  }
 
-  span {
-    color: red;
-    border: 1px solid red;
-    padding: 1vh;
-    position: absolute;
-    right: 0;
+    span {
+      color: red;
+      border: 1px solid red;
+      padding: 1vh;
+      position: absolute;
+      right: 10vw;
+    }
   }
 
   a {
