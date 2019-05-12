@@ -60,10 +60,8 @@ Otros 'GANCHOS' importantes son 'mounted', 'updated' y 'destroyed'. Todos los LI
 
 CONCEPTO RAWHTML y directiva v-html=""
 
-var ... rawHtml: '<span>ye!</span>'
-
-<p>con moustache mustaches: {{ rawHtml }}</p> reactivo
-<p>Using v-html directive: <span v-html="rawHtml"></span></p> CON ESTO LIMITAS EL RE-RENDER, NO ES ACONSEJABLE
+<p> {{ rawHtml }}</p> reactivo
+<p> <span v-html="rawHtml"></span></p> CON ESTO LIMITAS EL RE-RENDER, NO ES ACONSEJABLE
 
 ###########################################
 
